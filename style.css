@@ -3,8 +3,8 @@ body{
     background-color: #f2f2f2;
     text-align: center;
     margin: 0;
+    transition: 0.3s ease;
 }
-
 
 .container {
     background: white;
@@ -13,6 +13,7 @@ body{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
+    animation: fadeIn 1s ease-in;
 }
 
 .profile-img{
@@ -24,17 +25,49 @@ body{
 
 h1{
     color: darkblue;
-
 }
 
 button{
-    paddding:10px 20px;
+    padding: 10px 20px;
     background-color: blue;
     color: white;
     border:none;
     border-radius: 5px;
     cursor:pointer;
+    transition: 0.3s;
 }
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* 🌙 DARK MODE (IMPORTANT: outside media query) */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+.dark-btn {
+    background: black;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Responsive */
 @media screen and (max-width: 768px) {
 
     .container {
@@ -60,43 +93,4 @@ button{
         width: 100%;
         margin-top: 10px;
     }
-    body {
-    transition: 0.3s ease;
-}
-
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-btn {
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    background: black;
-    color: white;
-    border-radius: 5px;
-}
-.container {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-button {
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
 }
