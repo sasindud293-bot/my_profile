@@ -60,4 +60,43 @@ button{
         width: 100%;
         margin-top: 10px;
     }
+    body {
+    transition: 0.3s ease;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-btn {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+.container {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
 }
